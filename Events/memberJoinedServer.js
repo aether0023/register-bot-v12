@@ -25,11 +25,7 @@ let memberAylar = moment(member.user.createdAt).format("MM").replace("01", "Ocak
               `);
               member.setNickname(`${ayar.tag || ""} İsim | Yaş`);
 
-              if (durum) {
-                  member.roles.set([ayar.cezaliRolu]).catch();
-                  member.send(`Hesabın yeni açıldığı için **${sunucu.name}** adlı sunucuda cezalıya atıldın!`).catch();
-                  return;
-              }
+        if (member.user.createdTimestamp < 1000 * 60 * 60 * 24 * 7) member.roles.set([ayar.cezaliRolu]);
     };
 
 
