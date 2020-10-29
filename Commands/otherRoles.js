@@ -7,7 +7,7 @@ module.exports.execute = async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(embed.setDescription('Bu komutu kullanmak için gerekli izinlere sahip değilsin.')).then(x => x.delete({timeout: 10000}));
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[1]);
     let aether = args[0];
-    if (!aether || !member || aether !== "vip" || aether !== "muzisyen" || aether !== "vokal" || aether !== "terapist" || aether !== "soruncözücü" || aether !== "lovers" || aether !== "bilgi") return message.channel.send(olumsuz.setDescription(`Komutu doğru kullanmalısın. \`Örnek: ${ayar.prefix || ""}rol vip @üye\``).setFooter(`.rol bilgi | kullanarak bilgi alabilirsiniz.`)).then(x => x.delete({timeout: 12000}));
+    if (!aether || !member) return message.channel.send(olumsuz.setDescription(`Komutu doğru kullanmalısın. \`Örnek: ${ayar.prefix || ""}rol vip @üye\``).setFooter(`.rol bilgi | kullanarak bilgi alabilirsiniz.`)).then(x => x.delete({timeout: 12000}));
 
     if (aether === "bilgi" || aether === "info") {
         message.channel.send(embed.setDescription(`
