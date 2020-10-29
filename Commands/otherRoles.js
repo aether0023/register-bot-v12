@@ -28,11 +28,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(vipRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${vipRol} rolü verdim.`))
              message.react("✅");
-         } else if (vipRol && member.roles.cache.has(vipRol)) {
+         } 
+         if (vipRol && member.roles.cache.has(vipRol)) {
             member.roles.remove(vipRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${vipRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!vipRol) {
+         } 
+         if (!vipRol) {
              message.channel.send(olumsuz.setDescription(`VIP rolü bulunamadı.`))
              message.react("❎")
          }
@@ -45,11 +47,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(muzisyenRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${muzisyenRol} rolü verdim.`))
              message.react("✅");
-         } else if (muzisyenRol && member.roles.cache.has(muzisyenRol)) {
+         } 
+        if (muzisyenRol && member.roles.cache.has(muzisyenRol)) {
             member.roles.remove(muzisyenRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${muzisyenRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!muzisyenRol) {
+         } 
+        if (!muzisyenRol) {
              message.channel.send(olumsuz.setDescription(`Müzisyen rolü bulunamadı.`))
              message.react("❎")
          }
@@ -62,11 +66,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(vokalRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${vokalRol} rolü verdim.`))
              message.react("✅");
-         } else if (vokalRol && member.roles.cache.has(vokalRol)) {
+         } 
+        if (vokalRol && member.roles.cache.has(vokalRol)) {
             member.roles.remove(vokalRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${vokalRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!vokalRol) {
+         } 
+        if (!vokalRol) {
              message.channel.send(olumsuz.setDescription(`Vokal rolü bulunamadı.`))
              message.react("❎")
          }
@@ -79,11 +85,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(terapistRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${terapistRol} rolü verdim.`))
              message.react("✅");
-         } else if (terapistRol && member.roles.cache.has(terapistRol)) {
+         } 
+        if (terapistRol && member.roles.cache.has(terapistRol)) {
             member.roles.remove(terapistRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${terapistRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!terapistRol) {
+         } 
+        if (!terapistRol) {
              message.channel.send(olumsuz.setDescription(`Terapist rolü bulunamadı.`))
              message.react("❎")
          }
@@ -96,11 +104,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(sorunCözücüRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${sorunCözücüRol} rolü verdim.`))
              message.react("✅");
-         } else if (sorunCözücüRol && member.roles.cache.has(sorunCözücüRol)) {
+         } 
+        if (sorunCözücüRol && member.roles.cache.has(sorunCözücüRol)) {
             member.roles.remove(sorunCözücüRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${sorunCözücüRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!sorunCözücüRol) {
+         } 
+        if (!sorunCözücüRol) {
              message.channel.send(olumsuz.setDescription(`Sorun Çözücü rolü bulunamadı.`))
              message.react("❎")
          }
@@ -113,11 +123,13 @@ module.exports.execute = async (client, message, args) => {
              member.roles.add(loversRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${loversRol} rolü verdim.`))
              message.react("✅");
-         } else if (loversRol && member.roles.cache.has(loversRol)) {
+         } 
+        if (loversRol && member.roles.cache.has(loversRol)) {
             member.roles.remove(loversRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${loversRol} rolünü aldım.`))
             message.react("✅")
-         } else if (!loversRol) {
+         } 
+         if (!loversRol) {
              message.channel.send(olumsuz.setDescription(`Lovers rolü bulunamadı.`))
              message.react("❎")
          }
