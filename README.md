@@ -3,4 +3,8 @@
 
 
 Botu çalıştırmak için öncelikle `settings.json` isimli dosyanın içerisini doldurmayı unutmayınız.
+
+Çalıştırmadan önce `package.json` içerisindeki modülleri kurmayı unutmayınız.
+
 Doldurduktan sonra `start.bat` isimli dosyayı çalıştırıp kullanabilirsiniz.
+
