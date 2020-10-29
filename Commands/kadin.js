@@ -33,6 +33,7 @@ module.exports.execute = async (client, message, args) => {
                 Yetkili: message.author.id,
                 Komut: "Kadın"
             });
+        message.channel.send(embed.setDescription(`${member} adlı üye sunucumuza **kadın** olarak kaydedilmiştir.`))
 }
 
 module.exports.configuration = {
