@@ -26,9 +26,9 @@ let memberAylar = moment(member.user.createdAt).format("MM").replace("01", "Ocak
         
     if (durum) {
         member.roles.set([ayar.cezaliRolu])
-    }else{
+      }else{
     member.roles.set([ayar.kayitsizRolu])
-    }
+  }
     };
 
 
