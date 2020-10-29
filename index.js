@@ -36,4 +36,23 @@ fs.readdir("./Events", (err, files) => {
     });
 });
 
+  client.on("message", (message) => {
+        if (message.author.bot ||!message.content.startsWith(ayar.prefix) || !message.channel || message.channel.type == "dm") return;
+        let args = message.content
+          .substring(ayar.prefix.length)
+          .split(" ");
+        let command = args[0];
+        let bot = message.client;
+        args = args.splice(1);
+        let emoji = global.emoji;
+        let calistirici;
+        if (commands.has(command)) {
+          calistirici = commands.get(command);
+          calistirici.execute(bot, message, args, emoji);
+        } else if (aliases.has(command)) {
+          calistirici = aliases.get(command);
+          calistirici.execute(bot, message, args, emoji);
+        }
+  });
+
 client.login(ayar.token).then(console.log("Bot başarılı bir şekilde giriş yaptı.")).catch(e => console.error(e));
