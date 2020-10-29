@@ -72,7 +72,7 @@ module.exports.execute = async (client, message, args) => {
          }
     }
 
-    if (aether === "Terapist") {
+    if (aether === "terapist") {
         let terapistRol = message.guild.roles.cache.get(ayar.terapistRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
          if (terapistRol && !member.roles.cache.has(terapistRol)) {
