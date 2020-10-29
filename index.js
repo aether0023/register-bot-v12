@@ -44,14 +44,13 @@ fs.readdir("./Events", (err, files) => {
         let command = args[0];
         let bot = message.client;
         args = args.splice(1);
-        let emoji = global.emoji;
         let calistirici;
         if (commands.has(command)) {
           calistirici = commands.get(command);
-          calistirici.execute(bot, message, args, emoji);
+          calistirici.execute(bot, message, args);
         } else if (aliases.has(command)) {
           calistirici = aliases.get(command);
-          calistirici.execute(bot, message, args, emoji);
+          calistirici.execute(bot, message, args);
         }
   });
 
