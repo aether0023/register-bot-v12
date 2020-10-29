@@ -15,7 +15,8 @@ module.exports.execute = async (client, message, args) => {
     if (!member || !isim || !yaş) return message.channel.send(embed.setDescription(`Komutu doğru kullanmalısın. \`Örnek: ${ayar.prefix || '.'}k @üye isim yaş\``)).then(x => x.delete({timeout: 10000}));
 
             member.setNickname(`${ayar.tag || ""} ${isim} | ${yaş}`).catch();
-            if (message.guild.roles.cache.has(ayar.kadinRol1)) {
+            let kadinRol = message.guild.roles.cache.get(ayar.kadinRol1);
+            if (kadinRol) {
                 member.roles.cache.has(ayar.boosterRol) ? member.roles.set([ayar.boosterRol, ayar.kadinRol1]) : member.roles.set([ayar.kadinRol1]);
             }
 
