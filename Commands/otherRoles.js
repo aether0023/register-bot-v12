@@ -24,12 +24,12 @@ module.exports.execute = async (client, message, args) => {
     if (aether === "vip") {
         let vipRol = message.guild.roles.cache.get(ayar.vipRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
-         if (vipRol && !member.roles.cache.has(vipRol)) {
+         if (vipRol && !member.roles.cache.has(ayar.vipRol)) {
              member.roles.add(vipRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${vipRol} rolü verdim.`))
              message.react("✅");
          } 
-         if (vipRol && member.roles.cache.has(vipRol)) {
+         if (vipRol && member.roles.cache.has(ayar.vipRol)) {
             member.roles.remove(vipRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${vipRol} rolünü aldım.`))
             message.react("✅")
@@ -62,12 +62,12 @@ module.exports.execute = async (client, message, args) => {
     if (aether === "vokal") {
         let vokalRol = message.guild.roles.cache.get(ayar.vokalRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
-         if (vokalRol && !member.roles.cache.has(vokalRol)) {
+         if (vokalRol && !member.roles.cache.has(ayar.vokalRol)) {
              member.roles.add(vokalRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${vokalRol} rolü verdim.`))
              message.react("✅");
          } 
-        if (vokalRol && member.roles.cache.has(vokalRol)) {
+        if (vokalRol && member.roles.cache.has(ayar.vokalRol)) {
             member.roles.remove(vokalRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${vokalRol} rolünü aldım.`))
             message.react("✅")
@@ -81,12 +81,12 @@ module.exports.execute = async (client, message, args) => {
     if (aether === "terapist") {
         let terapistRol = message.guild.roles.cache.get(ayar.terapistRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
-         if (terapistRol && !member.roles.cache.has(terapistRol)) {
+         if (terapistRol && !member.roles.cache.has(ayar.terapistRol)) {
              member.roles.add(terapistRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${terapistRol} rolü verdim.`))
              message.react("✅");
          } 
-        if (terapistRol && member.roles.cache.has(terapistRol)) {
+        if (terapistRol && member.roles.cache.has(ayar.terapistRol)) {
             member.roles.remove(terapistRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${terapistRol} rolünü aldım.`))
             message.react("✅")
@@ -100,12 +100,12 @@ module.exports.execute = async (client, message, args) => {
     if (aether === "soruncözücü") {
         let sorunCözücüRol = message.guild.roles.cache.get(ayar.sorunCözücüRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
-         if (sorunCözücüRol && !member.roles.cache.has(sorunCözücüRol)) {
+         if (sorunCözücüRol && !member.roles.cache.has(ayar.sorunCözücüRol)) {
              member.roles.add(sorunCözücüRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${sorunCözücüRol} rolü verdim.`))
              message.react("✅");
          } 
-        if (sorunCözücüRol && member.roles.cache.has(sorunCözücüRol)) {
+        if (sorunCözücüRol && member.roles.cache.has(ayar.sorunCözücüRol)) {
             member.roles.remove(sorunCözücüRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${sorunCözücüRol} rolünü aldım.`))
             message.react("✅")
@@ -119,12 +119,12 @@ module.exports.execute = async (client, message, args) => {
     if (aether === "lovers") {
         let loversRol = message.guild.roles.cache.get(ayar.loversRol);
         if (!member.manageable) return message.channel.send(olumsuz.setDescription(`Bu üye üzerinde işlem gerçekleştiremiyorum.`)).then(x => x.delete({timeout: 10000}));
-         if (loversRol && !member.roles.cache.has(loversRol)) {
+         if (loversRol && !member.roles.cache.has(ayar.loversRol)) {
              member.roles.add(loversRol)
              message.channel.send(olumlu.setDescription(`${member} adlı üyeye başarılı bir şekilde ${loversRol} rolü verdim.`))
              message.react("✅");
          } 
-        if (loversRol && member.roles.cache.has(loversRol)) {
+        if (loversRol && member.roles.cache.has(ayar.loversRol)) {
             member.roles.remove(loversRol)
             message.channel.send(olumlu.setDescription(`${member} adlı üyeden başarılı bir şekilde ${loversRol} rolünü aldım.`))
             message.react("✅")
