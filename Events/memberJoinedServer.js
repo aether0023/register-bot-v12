@@ -15,7 +15,6 @@ let memberAylar = moment(member.user.createdAt).format("MM").replace("01", "Ocak
         member.roles.add(ayar.botRolü);
     }else{
         let durum = Date.now()-member.user.createdTimestamp < 1000 * 60 * 60 * 24 * 7
-                member.roles.add(ayar.kayitsizRolu)
               if (logKanal) logKanal.send(`
               \`>\` ${member} adlı üye sunucumuza giriş yaptı, seninle toplam \`${member.guild.memberCount}\` kişiyiz!
               \`>\` ${kayitSorumlusu} rolündeki yetkililer seninle ilgilenecektir.
@@ -24,7 +23,8 @@ let memberAylar = moment(member.user.createdAt).format("MM").replace("01", "Ocak
               \`>\` Bu Hesap **${durum ? "Şüpheli" : "Güvenli"}**
               `);
               member.setNickname(`${ayar.tag || ""} İsim | Yaş`);
-
+        
+        if (member.user.createdTimestamp > 1000 * 60 * 60 * 24 * 7) member.roles.add(ayar.kayitsizRolu);
         if (member.user.createdTimestamp < 1000 * 60 * 60 * 24 * 7) member.roles.set([ayar.cezaliRolu]);
     };
 
