@@ -24,8 +24,12 @@ let memberAylar = moment(member.user.createdAt).format("MM").replace("01", "Ocak
               `);
               member.setNickname(`${ayar.tag || ""} İsim | Yaş`);
         
-        if (member.user.createdTimestamp > 1000 * 60 * 60 * 24 * 7) member.roles.add(ayar.kayitsizRolu);
-        if (member.user.createdTimestamp < 1000 * 60 * 60 * 24 * 7) member.roles.set([ayar.cezaliRolu]);
+        if (member.user.createdTimestamp > 1000 * 60 * 60 * 24 * 7) {
+         return member.roles.add(ayar.kayitsizRolu);
+        }
+        if (member.user.createdTimestamp < 1000 * 60 * 60 * 24 * 7) {
+            return member.roles.set([ayar.cezaliRolu]);
+        };
     };
 
 
