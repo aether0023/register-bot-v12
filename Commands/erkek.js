@@ -23,7 +23,7 @@ module.exports.execute = async (client, message, args) => {
             if (member.user.username.includes(ayar.tag) && !member.roles.cache.has(ayar.ekipRolu)) {
                 member.roles.add(ayar.ekipRolu);
             }
-
+    
             rdb.add(`reg.${message.author.id}.erkek`, +1);
             kdb.push(`isimler.${member.id}`, {
                 guildName: `${ayar.tag || ""} ${isim} | ${yaş}`,
@@ -33,6 +33,8 @@ module.exports.execute = async (client, message, args) => {
                 Yetkili: message.author.id,
                 Komut: "Erkek"
             });
+    message.channel.send(embed.setDescription(`${member} adlı üye sunucumuza **erkek** olarak kaydedilmiştir.`))
+    
 }
 
 module.exports.configuration = {
