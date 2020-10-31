@@ -16,7 +16,7 @@ module.exports.execute = async (client, message, args) => {
         ${ayar.prefix || ""}rol vokal @üye \`>\` Belirtilen üyeye **Vokal** rolü verir/alır.
         ${ayar.prefix || ""}rol terapist @üye \`>\` Belirtilen üyeye **Terapist** rolü verir/alır.
         ${ayar.prefix || ""}rol soruncözücü @üye \`>\` Belirtilen üyeye **Sorun Çözücü** rolü verir/alır.
-        ${ayar.preefix || ""}rol lovers @üye \`>\` Belirtilen üyeye **Lovers** rolü verir/alır.
+        ${ayar.prefix || ""}rol lovers @üye \`>\` Belirtilen üyeye **Lovers** rolü verir/alır.
          `))
         return;
     }
