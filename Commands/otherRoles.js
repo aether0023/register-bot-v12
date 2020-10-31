@@ -140,6 +140,6 @@ module.exports.execute = async (client, message, args) => {
 module.exports.configuration = {
     name: "rol",
     aliases: ["rol", "r"],
-    usage: "r @üye vip/muzisyen/vokal/terapist/soruncözücü/lovers",
+    usage: "r vip/muzisyen/vokal/terapist/soruncözücü/lovers @üye",
     description: "Belirtilen üyeye belirttiğiniz rolleri verirsiniz."
 };
