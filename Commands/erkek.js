@@ -11,7 +11,6 @@ module.exports.execute = async (client, message, args) => {
     let isim = args[1];
     let yaş = Number (args[2]);
 
-    if (message.member.roles.highest.position <= member.roles.highest.position) return message.channel.send(embed.setDescription(`Kayıt etmeye çalıştığın kişi seninle aynı yetkide veya senden daha üstte olduğu için işlemi gerçekleştiremedim.`)).then(x => x.delete({timeout: 10000}));
     if (!member || !isim || !yaş) return message.channel.send(embed.setDescription(`Komutu doğru kullanmalısın. \`Örnek: ${ayar.prefix || '.'}e @üye isim yaş\``)).then(x => x.delete({timeout: 10000}));
 
             member.setNickname(`${ayar.tag || ""} ${isim} | ${yaş}`).catch();
